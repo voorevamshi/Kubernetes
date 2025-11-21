@@ -1,14 +1,30 @@
-# Create EKS Cluster from EC2 Machine
 
-Steps To Create EKS Cluster From Bastion Instance
-1) You need to have clusterconfig file.
-2) Create IAM Role with admin access.
-3) Attach this role to bastion instance.
-4) Connect to the machine and copy clusterconfig file from local machine.
-5) Install EKSCTL tool.
-6) Create EKS cluster.
 
-# Create EKS Cluster from Local Machine (Windows)
+# 🚀 Steps to Create EKS Cluster from Local Machine
+
+1. Have a `clusterconfig` YAML configuration ready.
+2. Generate **AWS Access Key** and **Secret Key**.
+3. Install **AWS CLI** on your local machine.
+4. Configure AWS CLI using:
+5. Install **eksctl** tool.
+6. Create EKS cluster using:
+
+   ```
+   eksctl create cluster -f clusterconfig.yaml
+   ```
+
+---
+
+# 🌐 Steps to Create EKS Cluster from Bastion Host
+
+1. Have a `clusterconfig` file ready.
+2. Create an IAM Role with **Admin access**.
+3. Attach this role to the bastion EC2 instance.
+4. Connect to the bastion and copy the config file.
+5. Install **eksctl** tool on the bastion.
+6. Create EKS cluster:
+---
+
 
 
 ## 1. Install Requirements
