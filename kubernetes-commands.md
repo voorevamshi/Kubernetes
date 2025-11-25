@@ -10,7 +10,7 @@
 | `kubectl get pods`                 | Lists all Pods.                                  |
 | `kubectl describe pod webapp`      | Shows full details of the Pod.                   |
 | `kubectl delete pod webapp`        | Deletes a Pod.                                   |
-
+| `kubectl apply -f pod.yaml`        | Creates a Pod from YAML file.                |
 ---
 
 ## 🔹 Deployment Commands
@@ -20,7 +20,21 @@
 | `kubectl create deployment webapp2 --image=nginx` | Creates a **Deployment** with ReplicaSet and Pods. |
 | `kubectl get deployments`                         | Lists Deployments.                                 |
 | `kubectl delete deployment webapp2`               | Deletes a Deployment.                              |
+| `kubectl apply -f deployment.yaml`                | Creates Deployment from YAML.  |
 
+---
+
+## 🔹 Generate Deployment YAML (Without Creating)
+
+| Command                                                                           | Description                                        |
+| --------------------------------------------------------------------------------- | -------------------------------------------------- |
+| `kubectl create deploy test --image=nginx --replicas=10 --dry-run=client -o yaml` | Generates YAML for Deployment without creating it. |
+
+Save to file:
+
+```bash
+kubectl create deploy test --image=nginx --replicas=10 --dry-run=client -o yaml > deployment.yaml
+```
 ---
 
 ## 🔹 Service (NodePort) Commands
