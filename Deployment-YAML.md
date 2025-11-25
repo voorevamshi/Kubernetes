@@ -4,6 +4,14 @@ Below is the same Deployment explained in a clean and readable table format.
 
 ---
 
+## 🔹 Generate Deployment YAML (Without Creating)
+
+| Command                                                                           | Description                                        |
+| --------------------------------------------------------------------------------- | -------------------------------------------------- |
+| `kubectl create deploy test --image=nginx --replicas=10 --dry-run=client -o yaml` | Generates YAML for Deployment without creating it. |
+
+---
+
 ## 🚀 Deployment YAML (Corrected Version)
 
 ```yaml
