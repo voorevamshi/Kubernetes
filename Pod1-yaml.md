@@ -14,6 +14,43 @@ spec:
     command: ["sh", "-c", "sleep 10"]
 ```
 
+
+### Pod Example With Restart Policy:
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp
+spec:
+  restartPolicy: Never
+  containers:
+  - name: app
+    image: busybox
+    command: ["sh", "-c", "sleep 10"]
+```
+
+### Pod With Two Containers:
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod5
+spec:
+  containers:
+  - name: app
+    image: busybox
+    command: ["sh", "-c", "sleep 10"]
+  - name: app2
+    image: busybox
+    command: ["sh", "-c", "sleep 5"]
+```
+
+---
+
+
+
 ## ▶ Explanation of Key Fields
 
 ### **command: ["sh", "-c", "sleep 10"]**
