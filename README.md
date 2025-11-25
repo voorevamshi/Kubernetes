@@ -6,3 +6,5 @@
 - [Kubernetes Commands](kubernetes-commands.md)
 - [Cluster Architecture ](cluster-Architecture.md)
 - [Pod  yaml 1 ](Pod1-yaml.md)
+- [Deployment YAML 1](Deployment-YAML.md)
+
