@@ -52,31 +52,36 @@ deployment:
         maxSurge: 1
 ```
 
-** Example**
+**Recreate Example:**
 
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test
+  name: myappone
   labels:
-    app: test
+    type: webapp
+
 spec:
   replicas: 10
   selector:
     matchLabels:
-      app: test
-  strategy: {}
+      type: webapp
+
+  strategy:
+    type: Recreate     # Deployment strategy
+
   template:
     metadata:
+      name: myapp-pod
       labels:
-        app: test
+        type: webapp
+
     spec:
       containers:
-      - name: nginx
-        image: nginx
-        resources: {}
-status: {}
+      - name: mywebapp
+        image: nginx:latest
+
 ```
 
 ---
