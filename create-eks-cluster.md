@@ -53,8 +53,14 @@ Default output format [json]: json
 
 ### Install kubectl 
 
-* Download 
+Run below commands in Git bash or Power Shall
+
+curl -LO https://dl.k8s.io/release/v1.29.0/bin/windows/amd64/kubectl.exe
+
+move kubectl.exe C:\Windows\System32\
+
 * Verify:
+kubectl version --client
 
 ```
 kubectl version --client
