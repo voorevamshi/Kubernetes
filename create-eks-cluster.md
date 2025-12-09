@@ -46,7 +46,7 @@ aws --version
 aws configure
 AWS Access Key ID [****************DF73]: ***
 AWS Secret Access Key [****************mifb]: *** 
-Default region name [eu-north-1]: eu-north-1
+Default region name [eu-north-1]: us-east-1
 Default output format [json]: json
 
 ```
@@ -77,19 +77,30 @@ eksctl version
 
 ## 2. Create `cluster.yaml`
 
+EKS will be created in us-east-1 as your AWS CLI is present in us-east-1
+
+EKS does NOT use your existing EC2 instances. It will create new instances
+
+A new default VPC will be used
+
+Your existing EC2 & VPC will be ignored
+
 Example:
 
 ```yaml
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
+
 metadata:
   name: demo-cluster
-  region: ap-south-1
+  region: us-east-1
 
 nodeGroups:
   - name: ng-1
-    instanceType: t3.medium
+    instanceType: t3.micro
     desiredCapacity: 2
+
+
 ```
 
 ## 3. Create Cluster
