@@ -46,7 +46,7 @@ aws --version
 aws configure
 AWS Access Key ID [****************DF73]: ***
 AWS Secret Access Key [****************mifb]: *** 
-Default region name [eu-north-1]: us-east-1
+Default region name [ap-south-2]: ap-south-2
 Default output format [json]: json
 
 ```
@@ -93,12 +93,15 @@ kind: ClusterConfig
 
 metadata:
   name: demo-cluster
-  region: us-east-1
+  region: ap-south-2
 
 nodeGroups:
   - name: ng-1
-    instanceType: t3.micro
+    instanceType: t3.small
     desiredCapacity: 2
+    minSize: 2
+    maxSize: 2
+    privateNetworking: false
 
 
 ```
