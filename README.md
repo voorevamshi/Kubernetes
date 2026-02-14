@@ -1,7 +1,5 @@
 # Kubernetes
 
-# Documentation
-
 - [Create EKS Cluster](cluster%20/create-eks-cluster.md)
 - [Kubernetes Commands](kubernetes-commands.md)
 - [Cluster Architecture ](cluster%20/cluster-Architecture.md)
