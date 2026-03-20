@@ -1,8 +1,9 @@
-# In Kubernetes, a Service of type LoadBalancer and an API Gateway serve different layers of the networking stack. While both distribute traffic, their *"intelligence"* and *"scope"* are very different.
+# API Gateway Spring Cloud Vs Kubernetes
 
 ## 1. The Core Difference
+- In Kubernetes, a Service of type LoadBalancer and an API Gateway serve different layers of the networking stack. While both distribute traffic, their *"intelligence"* and *"scope"* are very different.
 - **Service (Type: LoadBalancer):** Operates mostly at Layer 4 (Transport). It simply acts as a "traffic cop" that directs packets to a set of Pods based on IP and Port. It doesn't know what is inside the request (like headers or JSON data).
-- **API Gateway:** Operates at Layer 7 (Application). It is an "intelligent receptionist." It looks inside the request to decide where it should go, checks if the user is logged in, and can even change the request before it reaches the Pod.
+- **API Gateway:** Operates at Layer 7 ( Ex:Spring Cloud Application). It is an "intelligent receptionist." It looks inside the request to decide where it should go, checks if the user is logged in, and can even change the request before it reaches the Pod.
 
 ## 2. How they work together in Kubernetes
 Usually, you don't choose one over the other; they work in a chain.
