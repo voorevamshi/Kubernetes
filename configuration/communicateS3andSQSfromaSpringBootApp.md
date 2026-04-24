@@ -113,4 +113,3 @@ If an interviewer asks how you configured your app, you can say:
 On the application side, I simply ensured my **Deployment YAML** referenced the correct **Service Account**. In my Spring Boot app, I used **Spring Cloud AWS starters**, which default to the **DefaultCredentialsProvider**. This allowed the app to automatically pick up the **Web Identity Token** provided by EKS IRSA without needing any hardcoded secrets.
 If an interviewer asks how you configured your app, you can say:
 
-On the application side, I simply ensured my **Deployment YAML** referenced the correct **Service Account**. In my Spring Boot app, I used **Spring Cloud AWS starters**, which default to the **DefaultCredentialsProvider**. This allowed the app to automatically pick up the **Web Identity Token** provided by EKS IRSA without needing any hardcoded secrets.
