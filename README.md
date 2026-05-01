@@ -6,5 +6,6 @@
 - [Pod  yaml 1 ](workloads/pods%20/Pod1-yaml.md)
 - [Deployment YAML 1](workloads/deployments%20/Deployment-YAML.md)
 - [Kubernetes Dashboard](security/kubernetes-dashboard/create-kubernetes-dashboard.md)
+- [Kubernetes Local Development with Minikube](security/kubernetes-dashboard/create-minikube-kubernetes-dashboard.md)
 - [Q & A](Q_&_A.md)
 
